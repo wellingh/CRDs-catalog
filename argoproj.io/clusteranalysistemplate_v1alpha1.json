@@ -292,18 +292,6 @@
                       },
                       "query": {
                         "type": "string"
-                      },
-                      "secretRef": {
-                        "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "namespaced": {
-                            "type": "boolean"
-                          }
-                        },
-                        "type": "object",
-                        "additionalProperties": false
                       }
                     },
                     "type": "object",
@@ -4941,21 +4929,6 @@
                       },
                       "query": {
                         "type": "string"
-                      },
-                      "rangeQuery": {
-                        "properties": {
-                          "end": {
-                            "type": "string"
-                          },
-                          "start": {
-                            "type": "string"
-                          },
-                          "step": {
-                            "type": "string"
-                          }
-                        },
-                        "type": "object",
-                        "additionalProperties": false
                       },
                       "timeout": {
                         "format": "int64",

@@ -1,0 +1,103 @@
+{
+  "properties": {
+    "spec": {
+      "properties": {
+        "kafka": {
+          "properties": {
+            "listener": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "namespace": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "type": "object",
+          "additionalProperties": false
+        },
+        "user": {
+          "properties": {
+            "apiGroup": {
+              "type": "string"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "namespace": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "apiGroup",
+            "kind",
+            "name"
+          ],
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "kafka"
+      ],
+      "type": "object",
+      "additionalProperties": false
+    },
+    "status": {
+      "properties": {
+        "binding": {
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object",
+          "additionalProperties": false
+        },
+        "conditions": {
+          "items": {
+            "properties": {
+              "additionalProperties": {
+                "additionalProperties": {
+                  "type": "object"
+                },
+                "type": "object"
+              },
+              "lastTransitionTime": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            },
+            "type": "object",
+            "additionalProperties": false
+          },
+          "type": "array"
+        },
+        "observedGeneration": {
+          "type": "integer"
+        }
+      },
+      "type": "object",
+      "additionalProperties": false
+    }
+  },
+  "type": "object"
+}
